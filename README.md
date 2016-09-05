@@ -10,7 +10,7 @@ We implement block encryption only -- to get an encryption/decryption thing
 going, use CTR or similar. Note that inverse AES is much slower and cannot
 reuse the same components.
 
-The actual assembly language impolementation is in `aes256enc.S`, the
+The actual assembly language implementation is in `aes256enc.S`, the
 rest is just testing.
 
 # Running on Arduino
@@ -18,10 +18,11 @@ rest is just testing.
 The flashing code is incorporated into Makefile. You need to install 
 (just `apt install` on Debian/Ubuntu) `arduino` and `avrdude` packages.
 
-Plug arduino into USB and do a `make flash`. Now the thing will compile code, 
-flash it, and dump output via UART to stdout. Most relevant settings are
-in `Makefile` -- you should edit that.
-The default settings with my stock Arduino Uno (R3) w. Ubuntu 16.04.
+Plug Arduino into a USB port and do a `make flash`. Now the thing will compile 
+code, flash it, and dump output via UART with stty magic to your standard 
+output. Most relevant settings are in `Makefile` -- you should edit that
+first if something fails. The default settings with my stock Arduino Uno (R3) 
+with Ubuntu 16.04.
 
 ```
 c$ make flash
@@ -51,7 +52,7 @@ If you don't have an Arduino lying about, you can fetch
 `make sim`.
 
 This cycle-perfect simulator simulates even the UART so the output will be
-equivalent to above:
+basically equivalent to above:
 ```
 $ make sim
 simavr -v -v -v -m atmega328p avr-aes256enc
