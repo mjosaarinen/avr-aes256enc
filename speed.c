@@ -1,6 +1,5 @@
 // speed.c
-// 04-Sep-15  Markku-Juhani O. Saarinen <mjos@iki.fi>
-// bits and pieces originally from various public domain sources
+// 04-Sep-16  Markku-Juhani O. Saarinen <mjos@iki.fi>
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
