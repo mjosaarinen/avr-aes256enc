@@ -381,7 +381,7 @@ aes256_encrypt_ecb:
         .section    .rodata
         .type       sbox, @object
 
-        // muncho importante! sbox must be aligned at 256 bytes
+        // mucho importante! sbox must be aligned at 256 bytes
         .balign     256
 
 sbox:   .byte   0x63, 0x7C, 0x77, 0x7B, 0xF2, 0x6B, 0x6F, 0xC5
