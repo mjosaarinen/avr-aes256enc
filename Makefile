@@ -1,4 +1,5 @@
 # Makefile
+# 05-Sep-16  Markku-Juhani O. Saarinen
 
 PROJ		= avr-aes256enc
 TARGET		= atmega328p
@@ -38,7 +39,7 @@ dist:		clean
 		cd ..; \
 		tar cfvJ $(PROJ)/$(PROJ)-`date "+%Y%m%d%H%M00"`.txz $(PROJ)/*
 
-# simulate with avr
+# simulate with simavr
 sim:		$(PROJ)
 		simavr -v -v -v -m atmega328p $(PROJ)
 
