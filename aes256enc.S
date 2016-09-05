@@ -191,7 +191,7 @@ aes256_encrypt_ecb:
 
         ldi     r17,    13
 
-.encl:  call    .ksrws              //  two rounds
+.encl:  call    .ksrws              //  round function
         call    .mxcol
         adiw    r28,    16
 
