@@ -16,13 +16,14 @@ rest is just testing.
 # Running on Arduino
 
 The flashing code is incorporated into Makefile. You need to install 
-(just `apt install` on Debian/Ubuntu) `arduino` and `avrdude` packages.
+(just `apt install` on Debian/Ubuntu) at least `avr-gcc` and `avrdude` 
+packages. 
 
 Plug Arduino into a USB port and do a `make flash`. Now the thing will compile 
 code, flash it, and dump output via UART with stty magic to your standard 
 output. Most relevant settings are in `Makefile` -- you should edit that
-first if something fails. The default settings with my stock Arduino Uno (R3) 
-with Ubuntu 16.04.
+first if something fails. The default settings work with my stock Arduino Uno 
+(R3) with Ubuntu 16.04.
 
 ```
 $ make flash
