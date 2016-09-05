@@ -4,7 +4,7 @@ avr-aes256enc
 05-Sep-16  Markku-Juhani O. Saarinen <mjos@iki.fi>
 
 A public domain constant-time implementation of **AES-256** on 8-bit 
-*AVR microcontroller*, just because "you never know when you might need one" !
+AVR microcontroller, just because *you never know when you might need one* !
 
 We implement block encryption only -- to get an encryption/decryption thing 
 going, use CTR or similar. Note that inverse AES is much slower and cannot
@@ -25,7 +25,7 @@ first if something fails. The default settings with my stock Arduino Uno (R3)
 with Ubuntu 16.04.
 
 ```
-c$ make flash
+$ make flash
 mkdir -p obj/
 avr-gcc -Wall -Ofast -mmcu=atmega328p -DF_CPU=16000000 -c aes256enc.S -o obj/aes256enc.o
 ```
